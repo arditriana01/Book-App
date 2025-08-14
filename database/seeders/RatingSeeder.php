@@ -25,7 +25,7 @@ class RatingSeeder extends Seeder
                 'updated_at' => now()
             ];
 
-            if (count($data) === 1000) { // batch insert per 1000
+            if (count($data) === 1000) {
                 DB::table('ratings')->insert($data);
                 $data = [];
             }
